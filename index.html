@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KKN Desa Cipamekar 2026</title>
+  <meta
+    name="description"
+    content="Link resmi KKN Desa Cipamekar 2026 Universitas Ma’soem."
+  />
+  <style>
+    :root {
+      --blue: #0a8fd3;
+      --blue-dark: #07568f;
+      --green: #54b52a;
+      --green-dark: #087139;
+      --white: #ffffff;
+      --bg: #f7fbf9;
+      --text: #163627;
+      --muted: #617368;
+      --line: rgba(8, 113, 57, 0.12);
+      --shadow: rgba(7, 86, 143, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 16px;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(10, 143, 211, 0.14), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(84, 181, 42, 0.14), transparent 30%),
+        linear-gradient(145deg, #eef8ff 0%, #ffffff 45%, #eff9ec 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* elemen background halus */
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(2px);
+    }
+
+    body::before {
+      width: 240px;
+      height: 240px;
+      top: -70px;
+      left: -70px;
+      background: radial-gradient(circle, rgba(10, 143, 211, 0.14), transparent 70%);
+    }
+
+    body::after {
+      width: 260px;
+      height: 260px;
+      right: -90px;
+      bottom: -90px;
+      background: radial-gradient(circle, rgba(84, 181, 42, 0.14), transparent 70%);
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(10, 143, 211, 0.10);
+      border-radius: 28px;
+      box-shadow: 0 22px 60px var(--shadow);
+      position: relative;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      right: -60px;
+      top: 120px;
+      background: radial-gradient(circle, rgba(10, 143, 211, 0.08), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      left: -80px;
+      bottom: 20px;
+      background: radial-gradient(circle, rgba(84, 181, 42, 0.08), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      padding: 28px 24px 26px;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 5px;
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    .logo-wrap {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      padding: 5px;
+      background: var(--white);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    }
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      background: var(--white);
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(23px, 5vw, 29px);
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+      margin-bottom: 7px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    .location {
+      display: inline-block;
+      max-width: 100%;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .body-content {
+      padding: 26px 24px 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .desc {
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0 auto 22px;
+      max-width: 360px;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 60px;
+      padding: 13px 15px;
+      border-radius: 18px;
+      background: #ffffff;
+      color: var(--green-dark);
+      text-decoration: none;
+      border: 1px solid rgba(10, 143, 211, 0.13);
+      box-shadow: 0 8px 22px rgba(7, 86, 143, 0.07);
+      transition: 0.18s ease;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(84, 181, 42, 0.35);
+      box-shadow: 0 12px 28px rgba(7, 86, 143, 0.12);
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #f6fbff;
+      border: 1px solid rgba(10, 143, 211, 0.12);
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .icon img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .text-group {
+      min-width: 0;
+    }
+
+    .link-title {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 2px;
+      color: var(--green-dark);
+    }
+
+    .link-sub {
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 240px;
+    }
+
+    .arrow {
+      color: var(--blue);
+      font-size: 22px;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    .tagline {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .tagline span {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--green-dark);
+      background: #f4fbf7;
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 48px 20px;
+      }
+
+      .wrapper {
+        max-width: 500px;
+      }
+
+      .card {
+        border-radius: 32px;
+      }
+
+      .hero {
+        padding: 34px 34px 30px;
+      }
+
+      .body-content {
+        padding: 28px 34px 30px;
+      }
+
+      .logo-wrap {
+        width: 124px;
+        height: 124px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      body {
+        padding: 18px 12px;
+      }
+
+      .card {
+        border-radius: 24px;
+      }
+
+      .hero {
+        padding: 24px 16px 22px;
+      }
+
+      .body-content {
+        padding: 20px 16px 22px;
+      }
+
+      .logo-wrap {
+        width: 100px;
+        height: 100px;
+      }
+
+      .link-sub {
+        max-width: 170px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <section class="card">
+      <div class="hero">
+        <div class="logo-wrap">
+          <div class="logo">
+            <img src="logokkncipa.png" alt="Logo KKN Desa Cipamekar 2026" />
+          </div>
+        </div>
+
+        <h1>KKN Desa Cipamekar 2026</h1>
+        <p class="subtitle">Universitas Ma’soem</p>
+        <p class="location">📍 Cipamekar, Conggeang — Sumedang</p>
+      </div>
+
+      <div class="body-content">
+        <p class="desc">
+          Dokumentasi kegiatan, proker, cerita KKN, dan kehidupan Desa Cipamekar.
+        </p>
+
+        <div class="links">
+          <a
+            class="link-btn"
+            href="https://www.instagram.com/kkncipamekar2026?igsh=MXdqaHYwb2s5Nzdtcw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="left">
+              <div class="icon">
+                <img src="logoig.png" alt="Instagram" />
+              </div>
+              <div class="text-group">
+                <div class="link-title">Instagram</div>
+                <div class="link-sub">@kkncipamekar2026</div>
+              </div>
+            </div>
+            <div class="arrow">›</div>
+          </a>
+
+          <a
+            class="link-btn"
+            href="https://www.tiktok.com/@kkncipamekar2026?_r=1&_t=ZS-96eUd8TWAUO"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="left">
+              <div class="icon">
+                <img src="logott.png" alt="TikTok" />
+              </div>
+              <div class="text-group">
+                <div class="link-title">TikTok</div>
+                <div class="link-sub">Cerita singkat KKN</div>
+              </div>
+            </div>
+            <div class="arrow">›</div>
+          </a>
+
+          <a
+            class="link-btn"
+            href="https://maps.app.goo.gl/rhweB3BKK46kesQE9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="left">
+              <div class="icon">
+                <img src="logogmap.png" alt="Google Maps" />
+              </div>
+              <div class="text-group">
+                <div class="link-title">Lokasi KKN</div>
+                <div class="link-sub">Desa Cipamekar</div>
+              </div>
+            </div>
+            <div class="arrow">›</div>
+          </a>
+        </div>
+
+        <div class="tagline">
+          <span>Kolaborasi</span>
+          <span>Inovasi</span>
+          <span>Berkelanjutan</span>
+        </div>
+
+        <p class="footer">
+          KKN Desa Cipamekar 2026<br />
+          Universitas Ma’soem
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
