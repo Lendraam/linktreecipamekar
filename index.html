@@ -3,36 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KKN Desa Cipamekar 2026</title>
+  <title>KKN Desa Cipamekar 2026 | Universitas Ma'soem</title>
   <meta
     name="description"
-    content="Link resmi KKN Desa Cipamekar 2026 Universitas Ma’soem."
+    content="Portal resmi informasi dan dokumentasi KKN Desa Cipamekar 2026 Universitas Ma’soem."
   />
 
   <link rel="icon" type="image/png" href="logokkncipa2.png" />
   <link rel="shortcut icon" href="logokkncipa2.png" />
   <link rel="apple-touch-icon" href="logokkncipa2.png" />
-  <meta name="theme-color" content="#0a8fd3" />
+  <meta name="theme-color" content="#4e8edb" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --blue: #0a8fd3;
-      --blue-dark: #07568f;
-      --green: #54b52a;
-      --green-dark: #087139;
-      --white: #ffffff;
-      --bg: #f7fbf9;
-      --text: #163627;
-      --muted: #617368;
-      --line: rgba(8, 113, 57, 0.12);
-      --shadow: rgba(7, 86, 143, 0.12);
+      /* Warna asli dari Logo */
+      --logo-blue: #4e8edb;
+      --logo-green: #a2d275;
+      --logo-blue-dark: #2c6ebf;
+      --logo-green-dark: #5c9429;
+      
+      --text-dark: #1e293b;
+      --text-gray: #475569;
+      --bg-body: #e6f0f9; /* Biru langit sangat muda untuk background */
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
     body {
@@ -40,41 +44,38 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 28px 16px;
-      color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(10, 143, 211, 0.14), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(84, 181, 42, 0.14), transparent 30%),
-        linear-gradient(145deg, #eef8ff 0%, #ffffff 45%, #eff9ec 100%);
+      padding: 40px 16px;
+      color: var(--text-dark);
+      background-color: var(--bg-body);
       position: relative;
       overflow-x: hidden;
     }
 
-    /* elemen background halus */
-    body::before,
-    body::after {
-      content: "";
+    /* Efek Cahaya Aurora di Background agar tidak sepi */
+    .bg-glow-1 {
       position: fixed;
+      top: -10%;
+      left: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: var(--logo-blue);
+      filter: blur(120px);
+      opacity: 0.35;
       z-index: 0;
-      border-radius: 50%;
       pointer-events: none;
-      filter: blur(2px);
     }
 
-    body::before {
-      width: 240px;
-      height: 240px;
-      top: -70px;
-      left: -70px;
-      background: radial-gradient(circle, rgba(10, 143, 211, 0.14), transparent 70%);
-    }
-
-    body::after {
-      width: 260px;
-      height: 260px;
-      right: -90px;
-      bottom: -90px;
-      background: radial-gradient(circle, rgba(84, 181, 42, 0.14), transparent 70%);
+    .bg-glow-2 {
+      position: fixed;
+      bottom: -10%;
+      right: -10%;
+      width: 50vw;
+      height: 50vw;
+      background: var(--logo-green);
+      filter: blur(120px);
+      opacity: 0.35;
+      z-index: 0;
+      pointer-events: none;
     }
 
     .wrapper {
@@ -85,64 +86,33 @@
     }
 
     .card {
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid rgba(10, 143, 211, 0.10);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
       border-radius: 28px;
-      box-shadow: 0 22px 60px var(--shadow);
+      box-shadow: 0 24px 50px -12px rgba(78, 142, 219, 0.25);
+      overflow: hidden;
+    }
+
+    /* Banner Warna Penuh di Atas Kartu */
+    .banner {
+      height: 150px;
+      background: linear-gradient(135deg, var(--logo-blue), var(--logo-green));
       position: relative;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      width: 160px;
-      height: 160px;
-      right: -60px;
-      top: 120px;
-      background: radial-gradient(circle, rgba(10, 143, 211, 0.08), transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .card::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      left: -80px;
-      bottom: 20px;
-      background: radial-gradient(circle, rgba(84, 181, 42, 0.08), transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--blue), var(--green));
-      padding: 28px 24px 26px;
-      text-align: center;
-      color: var(--white);
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 5px;
-      background: rgba(255, 255, 255, 0.28);
-    }
-
+    /* Logo yang menabrak banner (Overlapping) */
     .logo-wrap {
-      width: 112px;
-      height: 112px;
-      margin: 0 auto 14px;
+      width: 116px;
+      height: 116px;
       border-radius: 50%;
       padding: 5px;
-      background: var(--white);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+      background: #ffffff;
+      position: absolute;
+      bottom: -58px; /* Setengah di luar banner */
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      z-index: 2;
     }
 
     .logo {
@@ -150,287 +120,221 @@
       height: 100%;
       border-radius: 50%;
       overflow: hidden;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      background: var(--white);
+      background: #ffffff;
     }
 
     .logo img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
 
-    h1 {
-      font-size: clamp(23px, 5vw, 29px);
-      line-height: 1.15;
-      letter-spacing: -0.4px;
-      margin-bottom: 7px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: rgba(255, 255, 255, 0.95);
-    }
-
-    .location {
-      display: inline-block;
-      max-width: 100%;
-      padding: 7px 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.26);
-      color: var(--white);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
     .body-content {
-      padding: 26px 24px 28px;
-      position: relative;
-      z-index: 1;
+      padding: 76px 32px 36px; /* Padding atas besar untuk memberi ruang logo */
+      text-align: center;
+    }
+
+    .badge-univ {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--logo-blue-dark);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+      background: rgba(78, 142, 219, 0.15);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
     }
 
     .desc {
-      text-align: center;
       font-size: 14px;
-      line-height: 1.65;
-      color: var(--muted);
-      margin: 0 auto 22px;
-      max-width: 360px;
+      line-height: 1.6;
+      color: var(--text-gray);
+      margin-bottom: 32px;
+      font-weight: 500;
     }
 
     .links {
       display: grid;
-      gap: 12px;
+      gap: 14px;
+      text-align: left;
     }
 
+    /* Tombol Tautan dengan Semburat Warna */
     .link-btn {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      min-height: 60px;
-      padding: 13px 15px;
+      gap: 16px;
+      padding: 14px 18px;
       border-radius: 18px;
-      background: #ffffff;
-      color: var(--green-dark);
+      /* Background tombol tidak putih polos, ada sedikit biru */
+      background: rgba(78, 142, 219, 0.04);
+      border: 1px solid rgba(78, 142, 219, 0.15);
       text-decoration: none;
-      border: 1px solid rgba(10, 143, 211, 0.13);
-      box-shadow: 0 8px 22px rgba(7, 86, 143, 0.07);
-      transition: 0.18s ease;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
+    /* Interaksi Hover: Tombol Menyala Penuh! */
     .link-btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(84, 181, 42, 0.35);
-      box-shadow: 0 12px 28px rgba(7, 86, 143, 0.12);
+      background: var(--logo-blue);
+      border-color: var(--logo-blue);
+      box-shadow: 0 12px 24px -8px rgba(78, 142, 219, 0.4);
+      transform: translateY(-3px);
     }
 
     .left {
       display: flex;
       align-items: center;
-      gap: 12px;
-      min-width: 0;
+      gap: 16px;
     }
 
     .icon {
       width: 42px;
       height: 42px;
-      border-radius: 14px;
+      border-radius: 12px;
       display: grid;
       place-items: center;
-      background: #f6fbff;
-      border: 1px solid rgba(10, 143, 211, 0.12);
-      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       flex: 0 0 auto;
+      transition: all 0.3s ease;
     }
 
     .icon img {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       object-fit: contain;
-      display: block;
     }
 
     .text-group {
-      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
 
     .link-title {
       font-size: 15px;
-      font-weight: 800;
-      margin-bottom: 2px;
-      color: var(--green-dark);
+      font-weight: 700;
+      color: var(--text-dark);
+      transition: color 0.3s ease;
     }
 
     .link-sub {
-      font-size: 12px;
-      color: var(--muted);
-      font-weight: 600;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 240px;
+      font-size: 12.5px;
+      color: var(--text-gray);
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
 
     .arrow {
-      color: var(--blue);
+      color: var(--logo-blue);
       font-size: 22px;
-      font-weight: 800;
-      flex: 0 0 auto;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    /* Ubah warna teks jadi putih saat di-hover */
+    .link-btn:hover .link-title,
+    .link-btn:hover .link-sub,
+    .link-btn:hover .arrow {
+      color: #ffffff;
     }
 
     .tagline {
-      margin-top: 16px;
+      margin-top: 36px;
       display: flex;
       justify-content: center;
-      gap: 7px;
+      align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .tagline span {
-      font-size: 11px;
-      font-weight: 800;
-      color: var(--green-dark);
-      background: #f4fbf7;
-      border: 1px solid var(--line);
-      padding: 6px 10px;
-      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--logo-green-dark);
+      background: rgba(162, 210, 117, 0.25);
+      padding: 6px 14px;
+      border-radius: 8px;
     }
 
     .footer {
-      margin-top: 20px;
-      text-align: center;
-      font-size: 12px;
-      color: var(--muted);
+      margin-top: 36px;
+      font-size: 12.5px;
+      color: var(--text-gray);
       line-height: 1.6;
+      font-weight: 500;
     }
 
-    @media (min-width: 768px) {
-      body {
-        padding: 48px 20px;
-      }
-
-      .wrapper {
-        max-width: 500px;
-      }
-
-      .card {
-        border-radius: 32px;
-      }
-
-      .hero {
-        padding: 34px 34px 30px;
-      }
-
-      .body-content {
-        padding: 28px 34px 30px;
-      }
-
-      .logo-wrap {
-        width: 124px;
-        height: 124px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      body {
-        padding: 18px 12px;
-      }
-
-      .card {
-        border-radius: 24px;
-      }
-
-      .hero {
-        padding: 24px 16px 22px;
-      }
-
-      .body-content {
-        padding: 20px 16px 22px;
-      }
-
-      .logo-wrap {
-        width: 100px;
-        height: 100px;
-      }
-
-      .link-sub {
-        max-width: 170px;
-      }
+    @media (max-width: 480px) {
+      .banner { height: 130px; }
+      .logo-wrap { width: 100px; height: 100px; bottom: -50px; }
+      .body-content { padding: 66px 24px 30px; }
+      .link-btn { padding: 12px 16px; }
     }
   </style>
 </head>
 <body>
+  <!-- Ornamen Glow di Background -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
   <main class="wrapper">
     <section class="card">
-      <div class="hero">
+      <!-- Banner Warna Warni -->
+      <div class="banner">
         <div class="logo-wrap">
           <div class="logo">
-            <img src="logokkncipa.png" alt="Logo KKN Desa Cipamekar 2026" />
+            <img src="logokkncipa.png" alt="Logo KKN Desa Cipamekar" />
           </div>
         </div>
-
-        <h1>KKN Desa Cipamekar 2026</h1>
-        <p class="subtitle">Universitas Ma’soem</p>
-        <p class="location">📍 Desa Cipamekar, Kecamatan Conggeang, Kabupaten Sumedang</p>
       </div>
 
       <div class="body-content">
+        <div class="badge-univ">Universitas Ma’soem</div>
+        <h1>KKN Desa Cipamekar 2026</h1>
         <p class="desc">
-          Dokumentasi kegiatan, proker, cerita KKN, dan kehidupan Desa Cipamekar.
+          Portal resmi dokumentasi program kerja dan informasi kegiatan mahasiswa di Desa Cipamekar.
         </p>
 
         <div class="links">
-          <a
-            class="link-btn"
-            href="https://www.instagram.com/kkncipamekar2026/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="link-btn" href="https://www.instagram.com/kkncipamekar2026/" target="_blank" rel="noopener noreferrer">
             <div class="left">
-              <div class="icon">
-                <img src="logoig.png" alt="Instagram" />
-              </div>
+              <div class="icon"><img src="logoig.png" alt="Instagram" /></div>
               <div class="text-group">
-                <div class="link-title">Instagram</div>
+                <div class="link-title">Instagram Resmi</div>
                 <div class="link-sub">@kkncipamekar2026</div>
               </div>
             </div>
             <div class="arrow">›</div>
           </a>
 
-          <a
-            class="link-btn"
-            href="https://www.tiktok.com/@kkncipamekar2026"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="link-btn" href="https://www.tiktok.com/@kkncipamekar2026" target="_blank" rel="noopener noreferrer">
             <div class="left">
-              <div class="icon">
-                <img src="logott.png" alt="TikTok" />
-              </div>
+              <div class="icon"><img src="logott.png" alt="TikTok" /></div>
               <div class="text-group">
-                <div class="link-title">TikTok</div>
+                <div class="link-title">TikTok Official</div>
                 <div class="link-sub">@kkncipamekar2026</div>
               </div>
             </div>
             <div class="arrow">›</div>
           </a>
 
-          <a
-            class="link-btn"
-            href="https://www.instagram.com/masoem_university/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="link-btn" href="https://www.instagram.com/masoem_university/" target="_blank" rel="noopener noreferrer">
             <div class="left">
-              <div class="icon">
-                <img src="logomu.png" alt="Universitas Ma’soem" />
-              </div>
+              <div class="icon"><img src="logomu.png" alt="Universitas" /></div>
               <div class="text-group">
                 <div class="link-title">Universitas Ma’soem</div>
                 <div class="link-sub">@masoem_university</div>
@@ -439,19 +343,12 @@
             <div class="arrow">›</div>
           </a>
 
-          <a
-            class="link-btn"
-            href="https://maps.app.goo.gl/rhweB3BKK46kesQE9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="link-btn" href="https://maps.app.goo.gl/rhweB3BKK46kesQE9" target="_blank" rel="noopener noreferrer">
             <div class="left">
-              <div class="icon">
-                <img src="logogmap.png" alt="Google Maps" />
-              </div>
+              <div class="icon"><img src="logogmap.png" alt="Lokasi" /></div>
               <div class="text-group">
-                <div class="link-title">Lokasi KKN</div>
-                <div class="link-sub">Desa Cipamekar</div>
+                <div class="link-title">Peta Lokasi KKN</div>
+                <div class="link-sub">Desa Cipamekar, Conggeang</div>
               </div>
             </div>
             <div class="arrow">›</div>
@@ -461,13 +358,13 @@
         <div class="tagline">
           <span>Kolaborasi</span>
           <span>Inovasi</span>
-          <span>Berkelanjutan</span>
+          <span>Keberlanjutan</span>
         </div>
 
-        <p class="footer">
-          KKN Desa Cipamekar 2026<br />
-          Universitas Ma’soem
-        </p>
+        <div class="footer">
+          © 2026 KKN Desa Cipamekar<br />
+          Kabupaten Sumedang, Jawa Barat
+        </div>
       </div>
     </section>
   </main>
